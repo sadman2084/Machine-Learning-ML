@@ -1,0 +1,302 @@
+exmaple 32:
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import RobustScaler
+import numpy as np
+data=np.array([[100,200],[150,300],[200,400]])
+scaler=MinMaxScaler()
+scaled_data=scaler.fit_transform(data)
+scaled_data
+
+exmaple 33:
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import RobustScaler
+import numpy as np
+data=np.array([[100,200],[150,300],[200,400]])
+scaler=StandardScaler()
+standard_data=scaler.fit_transform(data)
+standard_data
+
+example 34:
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import RobustScaler
+import numpy as np
+data=np.array([[100,200],[150,300],[200,400]])
+scaler=RobustScaler()
+robust_data=scaler.fit_transform(data)
+robust_data
+
+
+exmaple 35:
+import numpy as np
+from scipy import stats
+import pandas as pd
+from scipy.stats import chi2_contingency
+
+g1 = [20, 33, 21, 53, 23]
+g2 = [32, 52, 62, 63, 64]
+
+t_stat, p_value = stats.ttest_ind(g1, g2)
+
+print(f'T_statistic: {t_stat}')
+print(f'p_value: {p_value}')
+
+
+
+example 36:
+import numpy as np
+from scipy import stats
+import pandas as pd
+from scipy.stats import chi2_contingency
+
+data=pd.DataFrame({
+    'g1':[20,30],
+    'g2':[25,35]
+},index=['catagory 1','catagory 2'])
+
+chi2_stat,p_value,_,_ =chi2_contingency(data)
+print(f'T_statistic: {chi2_stat}')
+print(f'p_value: {p_value}')
+
+
+
+example 37:
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OrdinalEncoder
+
+import pandas as pd
+
+data=['low','medium','high','medium','low']
+
+encoder=LabelEncoder()
+
+encoder_data=encoder.fit_transform(data)
+print(encoder_data)
+
+
+example 38:
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OrdinalEncoder
+import pandas as pd
+
+
+df = pd.DataFrame({'size': ['Small', 'Medium', 'Large', 'Medium', 'Large']})
+
+encoder = OrdinalEncoder(categories=[['Small', 'Medium', 'Large']])
+
+encoder_data = encoder.fit_transform(df[['size']])
+print(encoder_data)
+
+
+exmaple 39:
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OrdinalEncoder
+import pandas as pd
+
+
+df = pd.DataFrame({'color': ['red', 'green', 'blue', 'green', 'red']})
+
+one_hot_encoded_data=pd.get_dummies(df,columns=['color'])
+
+print(one_hot_encoded_data)
+
+
+
+example 40:
+from imblearn.over_sampling import RandomOverSampler
+from collections import Counter
+import numpy as np
+import pandas as pd
+
+
+x = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])
+y = np.array([0, 0, 0, 0, 1])
+
+ros = RandomOverSampler(random_state=42)
+
+x_resampled, y_resampled = ros.fit_resample(x, y)
+
+print(f"Resampled y: {Counter(y_resampled)}")
+
+
+example 41:
+from imblearn.over_sampling import RandomOverSampler, SMOTE
+from collections import Counter
+import numpy as np
+
+# Define the input data
+x = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])
+y = np.array([0, 0, 0, 0, 1])
+
+# Apply RandomOverSampler
+ros = RandomOverSampler(random_state=42)
+x_ros, y_ros = ros.fit_resample(x, y)
+print(f"Resampled y with RandomOverSampler: {Counter(y_ros)}")
+
+# Apply SMOTE on the output of RandomOverSampler
+smote = SMOTE(random_state=42)
+x_smote, y_smote = smote.fit_resample(x_ros, y_ros)
+print(f"Resampled y with SMOTE: {Counter(y_smote)}")
+
+
+exmaple 42:
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+x=np.array([1,2,3,4,5]).reshape(-1,1)
+y=np.array([1,4,9,16,25])
+
+model=LinearRegression()
+model.fit(x,y)
+
+y_pred=model.predict(x)
+
+plt.scatter(x,y,color='blue')
+plt.plot(x,y_pred,color='red')
+
+plt.title("linear regression")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+
+
+example 43:
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+
+
+x = np.array([[1], [2], [3], [4], [5]])
+y = np.array([0, 0, 0, 1, 1])
+
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+
+model = LogisticRegression()
+model.fit(x_train, y_train)
+
+y_pred = model.predict(x_test)
+
+print(classification_report(y_test, y_pred))
+
+
+example 44:
+import pandas as pd
+import numpy as np
+
+dates=pd.date_range(start='2024-08-19',periods=10,freq='D')
+
+data=pd.DataFrame({'value':np.random.randint(1,100,size=(10,))},index=dates)
+
+
+print(data)
+
+exmaple 45:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+dates=pd.date_range(start='2024-08-19',periods=10,freq='D')
+
+data=pd.DataFrame({'value':np.random.randint(1,100,size=(10,))},index=dates)
+
+
+data.plot()
+plt.title("time series data")
+plt.xlabel('data')
+plt.ylabel('value')
+plt.show()
+
+
+example 46:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+
+dates = pd.date_range(start='2024-01-01', periods=100, freq='D')
+data = pd.Series(
+    10 + 0.1 * np.arange(100) + np.sin(2 * np.pi * np.arange(100) / 12),
+    index=dates
+)
+
+
+decomposition = seasonal_decompose(data, model='additive')
+
+
+decomposition.plot()
+plt.show()
+
+
+example 47:
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.arima.model import ARIMA
+
+
+dates = pd.date_range(start='2024-01-01', periods=100, freq='D')
+data = pd.Series(
+    10 + 0.1 * np.arange(100) + np.sin(2 * np.pi * np.arange(100) / 12),
+    index=dates
+)
+
+
+decomposition = seasonal_decompose(data, model='additive')
+decomposition.plot()
+
+model = ARIMA(data, order=(5, 1, 0))
+model_fit = model.fit()
+
+forecast_steps = 10
+forecast = model_fit.forecast(steps=forecast_steps)
+
+forecast_index = pd.date_range(start=data.index[-1] + pd.Timedelta(days=1), periods=forecast_steps, freq='D')
+
+plt.figure(figsize=(10, 6))
+plt.plot(data, label='Original Data')
+plt.plot(forecast_index, forecast, label='Forecast', linestyle='--', color='red')
+plt.title('ARIMA Model Forecast')
+plt.legend()
+plt.show()
+
+
+example 48:
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+nltk.download('punkt')
+
+text = "Natural Language Processing (NLP) is fascinating! It allows computers to understand human language. Let's explore tokenization."
+
+sentences = sent_tokenize(text)
+print("Sentence Tokenization:")
+print(sentences)
+
+words = word_tokenize(text)
+print("\nWord Tokenization:")
+print(words)
+
+
+example 49:
+from textblob import TextBlob
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+sid = SentimentIntensityAnalyzer()
+
+text = "I love this product! It is absolutely fantastic."
+
+sentiment_scores = sid.polarity_scores(text)
+
+print("Text:", text)
+print("Sentiment:", sentiment_scores)
