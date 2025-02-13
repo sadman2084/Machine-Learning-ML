@@ -1,32 +1,32 @@
-# Machine Learning Applications
+# মেশিন লার্নিং এর প্রয়োগসমূহ
 
-## 1. Retail (Amazon/Big Bazaar)
-- **Product Recommendation**: Suggests products based on customer preferences.
-- **Inventory Prediction**: Helps in managing stock levels efficiently.
-- **Dynamic Pricing**: Adjusts prices based on demand and supply.
-- **Fraud Detection**: Identifies suspicious transactions to prevent fraud.
+## ১. রিটেইল (Amazon/Big Bazaar)
+- **পণ্য সুপারিশ**: কাস্টমারের পছন্দ অনুযায়ী পণ্য সাজেশন দেয়।
+- **স্টক পূর্বাভাস**: স্টক ব্যবস্থাপনা সহজ করে।
+- **ডাইনামিক প্রাইসিং**: চাহিদা ও সরবরাহের ভিত্তিতে মূল্য নির্ধারণ করে।
+- **প্রতারণা শনাক্তকরণ**: সন্দেহজনক লেনদেন চিহ্নিত করে প্রতারণা রোধ করে।
 
-## 2. Banking & Finance
-- **Loan Approval & Risk Analysis**: Assesses creditworthiness of customers.
-- **Fraud Detection**: Identifies fraudulent transactions in real time.
-- **Automated Trading**: Uses AI-driven algorithms for stock trading.
-- **Customer Spending Analysis**: Helps in financial planning by analyzing transactions.
+## ২. ব্যাংকিং ও ফাইন্যান্স
+- **ঋণ অনুমোদন ও ঝুঁকি বিশ্লেষণ**: গ্রাহকের ঋণগ্রহণের যোগ্যতা নির্ধারণ করে।
+- **প্রতারণা শনাক্তকরণ**: রিয়েল-টাইমে জালিয়াতি শনাক্ত করে।
+- **স্বয়ংক্রিয় ট্রেডিং**: স্টক ট্রেডিংয়ের জন্য এআই চালিত অ্যালগরিদম ব্যবহার করে।
+- **ব্যয় বিশ্লেষণ**: গ্রাহকের লেনদেন বিশ্লেষণ করে আর্থিক পরিকল্পনা সহজ করে।
 
-## 3. Transportation
-- **Traffic Prediction & Optimization**: Reduces congestion and improves travel time.
-- **Ride-Sharing Optimization**: Enhances services like Uber and Lyft.
-- **Autonomous Vehicles**: Enables self-driving cars using AI models.
-- **Smart Route Planning**: Suggests efficient routes for delivery and travel.
+## ৩. পরিবহন
+- **ট্রাফিক পূর্বাভাস ও অপ্টিমাইজেশন**: যানজট কমিয়ে ভ্রমণ সময় উন্নত করে।
+- **রাইড শেয়ারিং অপ্টিমাইজেশন**: Uber এবং Lyft-এর মতো পরিষেবাগুলোর পারফরম্যান্স উন্নত করে।
+- **স্বয়ংক্রিয় যানবাহন**: স্বয়ংক্রিয় গাড়ির জন্য এআই মডেল ব্যবহার করা হয়।
+- **স্মার্ট রুট পরিকল্পনা**: ডেলিভারি ও ভ্রমণের জন্য কার্যকরী রুট সুপারিশ করে।
 
-## 4. Manufacturing
-- **Quality Control**: Detects defects in production lines.
-- **Predictive Maintenance**: Prevents equipment failures by analyzing data.
-- **Supply Chain Optimization**: Improves logistics and inventory management.
-- **Automation in Production**: Uses AI-powered robots for efficiency.
+## ৪. উৎপাদন
+- **গুণগত মান পর্যবেক্ষণ**: উৎপাদন লাইনে ত্রুটি সনাক্ত করে।
+- **পূর্বাভাস ভিত্তিক রক্ষণাবেক্ষণ**: ডেটা বিশ্লেষণ করে যন্ত্রপাতির সমস্যা প্রতিরোধ করে।
+- **সরবরাহ চেইন অপ্টিমাইজেশন**: সরবরাহ ও লজিস্টিক উন্নত করে।
+- **উৎপাদন স্বয়ংক্রিয়করণ**: উৎপাদনের জন্য এআই চালিত রোবট ব্যবহার করা হয়।
 
-## 5. Customer Internet (Twitter, Facebook, etc.)
-- **User Behavior Analysis**: Understands user preferences and engagement.
-- **Fake News Detection**: Identifies and filters misleading information.
-- **Sentiment Analysis**: Determines public opinion on various topics.
-- **Targeted Advertising**: Displays ads based on user interests.
+## ৫. কাস্টমার ইন্টারনেট (Twitter, Facebook, ইত্যাদি)
+- **ব্যবহারকারীর আচরণ বিশ্লেষণ**: ব্যবহারকারীদের পছন্দ ও সম্পৃক্ততা বোঝে।
+- **ভুয়া তথ্য শনাক্তকরণ**: বিভ্রান্তিকর তথ্য ফিল্টার করে।
+- **সেন্টিমেন্ট অ্যানালাইসিস**: জনমত নির্ধারণ করতে সাহায্য করে।
+- **টার্গেটেড বিজ্ঞাপন**: ব্যবহারকারীর আগ্রহ অনুযায়ী বিজ্ঞাপন প্রদর্শন করে।
 
