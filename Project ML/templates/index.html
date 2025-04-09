@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Build Recommendation</title>
+</head>
+<body>
+    <h1>PC Build Recommendation</h1>
+    
+
+    <form action="/recommend" method="POST">
+        <label for="cpu">Choose a CPU:</label>
+        <select id="cpu" name="cpu">
+            <option value="Intel">Intel</option>
+            <option value="AMD">AMD</option>
+            <option value="ARM">ARM</option>
+            <option value="Apple">Apple</option>
+         
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+    
+   
+    {% if recommendations %}
+        <h2>Recommendations for CPU: {{ cpu }}</h2>
+        <div>{{ recommendations | safe }}</div>
+    {% endif %}
+</body>
+</html>
